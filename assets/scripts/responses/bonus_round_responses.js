@@ -1,3 +1,4 @@
+// Objects
 var yoda = {
   species: 'Green swamp monster',
   affiliation: 'Jedi Order Galactic Republic',
@@ -9,7 +10,38 @@ var yoda = {
 
 var yodaTitle = 'Yoda ' + yoda.occupation;
 
+// arrays
+var zeroToTen = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var numsAsWords = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+
+// beast mode
 function addsToObject(obj, key, val) {
   obj[key] = val;
+  return obj;
+}
+
+var isEven = function (number) {
+  return number % 2 === 0;
+}
+
+var objectFromArrays = function(listOne, listTwo) {
+  var strings;
+  var nums;
+
+  if (typeof listOne[0] === 'string') {
+    strings = listOne;
+    nums = listTwo;
+  }
+  else {
+    strings = listTwo;
+    nums = listOne;
+  }
+
+  var obj = {};
+
+  for (var i = 0; i < strings.length; i++) {
+    obj[strings[i]] = nums[i];
+  }
+
   return obj;
 }

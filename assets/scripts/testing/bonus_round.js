@@ -1,3 +1,4 @@
+
 describe('Using Objects', function() {
 
   describe('a object called yoda', function() {
@@ -29,8 +30,30 @@ describe('Using Objects', function() {
       });
     });
 
-    describe('beast mode', function() {
-      it('there should be a function called addsToObject that takes an object, a key, and a value as parameters', function () {
+    });
+  });
+  describe('Arrays', function(){
+    describe('zeroToTen', function() {
+      it('should be an array', function () {
+        expect(Array.isArray(zeroToTen)).to.be(true);
+      });
+      it('should hold the numbers 0 - 10 as values', function () {
+        expect(zeroToTen).to.contain(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+      });
+    })
+    describe('numsAsWords', function() {
+      it('should be an array', function () {
+        expect(Array.isArray(numsAsWords)).to.be(true);
+      });
+      it('should have the english words for the numbers 0 - 10 as values', function () {
+        expect(numsAsWords).to.contain('zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten');
+      });
+    })
+  });
+
+  describe('beast mode', function() {
+    describe('addsToObject', function() {
+      it('there should be a function that takes an object, a key, and a value as parameters', function () {
         expect(typeof addsToObject).to.be('function');
       });
       it('addsToObject should add the value to the object at the passed in key', function () {
@@ -41,7 +64,24 @@ describe('Using Objects', function() {
         expect(obj.two).to.equal(2);
       });
     });
-  });
 
+    describe('isEven', function() {
+      it('should be a function', function () {
+        expect(typeof isEven).to.be('function');
+      });
+      it('should take a number and return true if the number is even, false if it is odd', function () {
+        expect(isEven(8)).to.be(true);
+        expect(isEven(9)).to.be.(false);
+      });
+    });
 
+    describe('objectFromArrays', function() {
+      it('should be a function that takes an array of numbers and an array of strings as parameters', function () {
+        expect(typeof objectFromArrays).to.be('function');
+      });
+      it('should create a new object using the arrays passed in; each string from the array of strings should be the key, and the number from the array of numbers at the same index as the string should hold the value', function () {
+        var obj = objectFromArrays(numsAsWords, zeroToTen);
+        expect(obj).to.have.keys(numsAsWords);
+      });
+    });
 });
