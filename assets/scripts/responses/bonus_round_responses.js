@@ -22,9 +22,9 @@ function addsToObject(obj, key, val) {
 
 var isEven = function (number) {
   return number % 2 === 0;
-}
+};
 
-var objectFromArrays = function(listOne, listTwo) {
+function objectFromArrays(listOne, listTwo) {
   var strings;
   var nums;
 
@@ -44,4 +44,24 @@ var objectFromArrays = function(listOne, listTwo) {
   }
 
   return obj;
+};
+
+var myMap = function(list, func) {
+  var newArr = [];
+
+  for (var i = 0; i < list.length; i++) {
+    newArr.push(func(list[i]));
+  }
+
+  return newArr;
+}
+
+function myFilter(list, func) {
+  var finalArr = [];
+  for (var i = 0; i < list.length; i++) {
+    if (func(list[i])) { // same as if (func(list[i]) === true)
+      finalArr.push(list[i]);
+    }
+  }
+  return finalArr;
 }
