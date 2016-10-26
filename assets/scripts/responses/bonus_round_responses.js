@@ -20,8 +20,8 @@ function addsToObject(obj, key, val) {
   return obj;
 }
 
-var isEven = function (number) {
-  return number % 2 === 0;
+var isOdd = function (number) {
+  return number % 2 !== 0;
 };
 
 function objectFromArrays(listOne, listTwo) {
