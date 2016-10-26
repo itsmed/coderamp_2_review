@@ -1,6 +1,6 @@
 'use strict';
 
-var t = {
+var partOneTests = {
   currentTest: 0,
   units: [
     {
@@ -75,10 +75,24 @@ var t = {
     },
     {
       title: 'function with one parameter',
-      prompt: 'There should be a function called greetName that takes a name as a parameter. When invoked, it should return the string "Hello Jane" when Jane is passed in as an argument',
+      prompt: 'There should be a function called greetName that takes a name as a parameter. When invoked, it should return the string "Hello <name>" where <name> is the parameter passed in.',
       target: 'greetName',
       type: 'func',
-      expected: 'Hello Jim'
+      expected: 'Hello'
     },
+    {
+      title: 'A fuction with two parameters',
+      prompt: 'There should be a function called longestString that takes two strings as parameters. When invoked, it should return the string that is the longest of the two. If they are equal length, return a string that says "Equal"',
+      target: 'longestString',
+      type: 'func',
+      expected: 'Jackie O'
+    },
+    {
+      title: 'Another function with two parameters',
+      prompt: 'There should be a function sum that takes two numbers and returns the sum of those two numbers',
+      target: 'sum',
+      type: 'func',
+      expected: 36
+    }
   ]
 };
