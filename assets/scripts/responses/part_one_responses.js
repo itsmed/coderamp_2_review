@@ -14,3 +14,22 @@ function greet(){
 function greetName(name) {
   return 'Hello ' + name;
 }
+
+var longestString = function(string1, string2) {
+  if (string1 !== undefined && string2 !== undefined) {
+    console.log(string1, string2);
+    if (string1.length > string2.length) {
+      return string1;
+    }
+    else if (string2.length > string1.length) {
+      return string2;
+    }
+    else {
+      return 'Equal';
+    }
+  } else console.log("meh'")
+}
+
+var sum = function(x, y) {
+  return x + y;
+}

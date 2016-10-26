@@ -78,7 +78,7 @@ var partOneTests = {
       prompt: 'There should be a function called greetName that takes a name as a parameter. When invoked, it should return the string "Hello <name>" where <name> is the parameter passed in.',
       target: 'greetName',
       type: 'func',
-      expected: 'Hello'
+      expected: 'Hello Jim'
     },
     {
       title: 'A fuction with two parameters',

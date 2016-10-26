@@ -57,7 +57,6 @@ function TestUtils(tests) {
     showTestTitle: function(test) {
       var title = document.createElement('h2');
       title.textContent = test.title;
-      // this.clearTestTitle();
       document.getElementById('test_title').appendChild(title);
     },
 
@@ -96,7 +95,6 @@ function TestUtils(tests) {
     },
 
     sendMessage: function(message, color) {
-      // document.getElementById('tests').innerHTML = '';
       var newMessage = this.makeElement(message, color);
       document.getElementById('tests').prepend(newMessage);
     }
